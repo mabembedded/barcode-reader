@@ -49,3 +49,5 @@ $(VIDEO_SRC_DIR)/%.o: $(VIDEO_SRC_DIR)/%.c
 $(WINDOW_SRC_DIR)/%.o: $(WINDOW_SRC_DIR)/%.c
 	gcc $(CFLAGS) -c -o $@ $^
 
+clean:
+	git clean -fxd .
