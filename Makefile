@@ -24,7 +24,7 @@ WINDOW_SRC_DIR := $(PWD)/window
 WINDOW_SRC_FILES := $(wildcard $(WINDOW_SRC_DIR)/*.c)
 WINDOW_OBJ_FILES := $(patsubst $(WINDOW_SRC_DIR)/%.c,$(WINDOW_SRC_DIR)/%.o,$(WINDOW_SRC_FILES))
 
-CFLAGS := -I$(PWD)/ -I$(PWD)/qrcode -I$(PWD)/decoder -I$(PWD)/processor
+CFLAGS := -I$(PWD)/ -I$(PWD)/qrcode -I$(PWD)/decoder -I$(PWD)/processor -g
 
 LDFLAGS := -lpng
 

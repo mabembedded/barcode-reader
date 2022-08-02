@@ -20,23 +20,23 @@
 
 #define HAVE_LIBPTHREAD
 
-#define ENABLE_EAN
+//#define ENABLE_EAN
 
-#define ENABLE_I25
+//#define ENABLE_I25
 
-#define ENABLE_DATABAR
+//#define ENABLE_DATABAR
 
-#define ENABLE_CODABAR
+//#define ENABLE_CODABAR
 
-#define ENABLE_CODE39
+//#define ENABLE_CODE39
 
-#define ENABLE_CODE93
+//#define ENABLE_CODE93
 
-#define ENABLE_CODE128
+//#define ENABLE_CODE128
 
 #define ENABLE_PDF417
 
-#define ENABLE_QRCODE
+//#define ENABLE_QRCODE
 
 #define ZBAR_VERSION_MAJOR 0
 
@@ -45,3 +45,5 @@
 #define HAVE_SYS_TIME_H
 
 #define HAVE_POLL_H
+
+#define DEBUG_LEVEL 4

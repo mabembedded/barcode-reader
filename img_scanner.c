@@ -665,6 +665,7 @@ int zbar_scan_image (zbar_image_scanner_t *iscn,
         return(-1);
     iscn->img = img;
 
+    printf("MAB %s - image is in greyscale\n", __func__);
     /* recycle previous scanner and image results */
     zbar_image_scanner_recycle_image(iscn, img);
     syms = iscn->syms;

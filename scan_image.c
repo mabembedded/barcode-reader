@@ -70,13 +70,14 @@ int main (int argc, char **argv)
     scanner = zbar_image_scanner_create();
 
     /* configure the reader */
-    zbar_image_scanner_set_config(scanner, 0, ZBAR_CFG_ENABLE, 1);
+    zbar_image_scanner_set_config(scanner, ZBAR_PDF417, ZBAR_CFG_ENABLE, 1);
 
     /* obtain image data */
     int width = 0, height = 0;
     void *raw = NULL;
     get_data(argv[1], &width, &height, &raw);
 
+    printf("successfully got image, height = %d, width = %d\n", height, width);
     /* wrap image data */
     zbar_image_t *image = zbar_image_create();
     zbar_image_set_format(image, zbar_fourcc('Y','8','0','0'));
@@ -86,6 +87,7 @@ int main (int argc, char **argv)
     /* scan the image for barcodes */
     int n = zbar_scan_image(scanner, image);
 
+    printf("zbar_scan_image returned %d\n", n);
     /* extract results */
     const zbar_symbol_t *symbol = zbar_image_first_symbol(image);
     for(; symbol; symbol = zbar_symbol_next(symbol)) {
